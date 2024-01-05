@@ -1,0 +1,14 @@
+<div class="dropdown" [ngClass]="{ open: isOpen }">
+  <button type="button" class="dropdown__btn" (click)="toggleDropdown()">
+    {{ selectedItem.value }}
+  </button>
+  <ul class="dropdown__list">
+    <li
+      class="dropdown__list-item"
+      *ngFor="let item of data"
+      (click)="selectItem(item)"
+    >
+      {{ item.value }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+header {
+  padding-block: 8px;
+  background-color: #eaddff;
+  color: #21005d;
+  margin-bottom: 16px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  .action-panel {
+    button {
+      background: #6750a4;
+      color: #fff;
+      border: none;
+      padding: 4px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: #7f67be;
+      }
+    }
+  }
+}

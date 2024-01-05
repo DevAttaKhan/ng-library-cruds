@@ -1,0 +1,76 @@
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <h4>Enter book Details</h4>
+
+    <div class="form-control">
+      <label>Title</label>
+      <input type="text" name="title" ngModel #title="ngModel" required />
+      <small
+        *ngIf="
+          (form.submitted && !title.touched) || (title.errors && title.touched)
+        "
+        >title is a required field.</small
+      >
+    </div>
+
+    <div class="form-control">
+      <label>Author</label>
+      <input type="text" name="author" ngModel #author="ngModel" required />
+      <small
+        *ngIf="
+          (form.submitted && !author.touched) ||
+          (author.errors && author.touched)
+        "
+        >author is a required field.</small
+      >
+    </div>
+    <div class="form-control">
+      <label>Genre</label>
+      <app-dropdown
+        name="dropdown"
+        ngModel
+        #dropdown="ngModel"
+        dropdown-validator
+      ></app-dropdown>
+      <small
+        *ngIf="
+          (form.submitted && !dropdown.touched) ||
+          (dropdown.errors && dropdown.touched)
+        "
+        >dropdown is a required field.</small
+      >
+    </div>
+    <div class="form-control">
+      <label>Publisher</label>
+      <input
+        type="text"
+        name="publisher"
+        ngModel
+        #publisher="ngModel"
+        required
+      />
+      <small
+        *ngIf="
+          (form.submitted && !publisher.touched) ||
+          (publisher.errors && publisher.touched)
+        "
+        >author is a required field.</small
+      >
+    </div>
+
+    <div class="form-control">
+      <label>Publish date</label>
+      <input type="text" name="date" ngModel #date="ngModel" required />
+      <small
+        *ngIf="
+          (form.submitted && !date.touched) || (date.errors && date.touched)
+        "
+        >author is a required field.</small
+      >
+    </div>
+    <div class="actions">
+      <input type="submit" value="Add" />
+      <button>Cancel</button>
+    </div>
+  </form>
+</div>
