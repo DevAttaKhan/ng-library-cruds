@@ -27,7 +27,6 @@ export class DropdownComponent implements OnInit, ControlValueAccessor {
 
   writeValue(obj: any): void {
     this.selectedItem = obj || { id: 1, value: 'select genere' };
-    console.log(obj);
   }
   registerOnChange(fn: any): void {
     this.onChanged = fn;
@@ -54,7 +53,7 @@ export class DropdownComponent implements OnInit, ControlValueAccessor {
   selectItem(item: IOption) {
     this.onTouched();
     this.selectedItem = item;
-    this.onChanged(item);
+    this.onChanged(item.value);
     this.isOpen = false;
   }
 

@@ -1,7 +1,7 @@
 header {
   padding-block: 8px;
-  background-color: #eaddff;
-  color: #21005d;
+  background-color: #6750a4;
+  color: #fff;
   margin-bottom: 16px;
 
   .container {
@@ -18,15 +18,15 @@ header {
 
   .action-panel {
     button {
-      background: #6750a4;
-      color: #fff;
+      background: #eaddff;
+      color: #21005d;
       border: none;
       padding: 4px 16px;
       border-radius: 4px;
       cursor: pointer;
       transition: 0.3s;
       &:hover {
-        background-color: #7f67be;
+        background-color: #ccc2dc;
       }
     }
   }

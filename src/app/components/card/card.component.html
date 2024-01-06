@@ -1,23 +1,23 @@
-<div class="card">
-  <h4 class="title">Lord of the rings</h4>
+<div class="card" *ngIf="book">
+  <h4 class="title">{{ book.title }}</h4>
   <div class="detail-row">
     <span>author</span>
-    <span>JRR Tolkins</span>
+    <span>{{ book.author }}</span>
   </div>
   <div class="detail-row">
     <span>Genre</span>
-    <span>Fantasy</span>
+    <span>{{ book.genre }}</span>
   </div>
   <div class="detail-row">
     <span>Publisher</span>
-    <span>New Moon Publisher</span>
+    <span>{{ book.publisher }}</span>
   </div>
   <div class="detail-row">
     <span>Publishe date</span>
-    <span>august 2020</span>
+    <span>{{ book.date }}</span>
   </div>
   <div class="card-footer">
-    <button>Delete</button>
-    <button>Edit</button>
+    <button (click)="handleDelete(book.id)">Delete</button>
+    <button (click)="handleEdit(book)">Edit</button>
   </div>
 </div>

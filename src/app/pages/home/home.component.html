@@ -1,11 +1,8 @@
 <div class="container">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <h3 *ngIf="!bookService.bookList.length">Start adding books to your list</h3>
+  <app-card
+    *ngFor="let bookItem of bookService.bookList"
+    [book]="bookItem"
+    (onDelete)="handleDelete($event)"
+  ></app-card>
 </div>

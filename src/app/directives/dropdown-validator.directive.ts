@@ -18,7 +18,6 @@ import {
 })
 export class DropdownValidatorDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors | null {
-    console.log(control.value);
     if (control.value?.id === -1) {
       return {
         required: true,
