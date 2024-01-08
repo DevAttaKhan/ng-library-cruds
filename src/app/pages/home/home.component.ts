@@ -9,9 +9,11 @@ import { BookService } from 'src/app/services/book.service';
 export class HomeComponent implements OnInit {
   constructor(public bookService: BookService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bookService.getBooks();
+  }
 
-  handleDelete(id: number) {
+  handleDelete(id: string) {
     this.bookService.deleteBook(id);
   }
 }

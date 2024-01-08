@@ -6,6 +6,7 @@ import { UpsertComponent } from './pages/upsert/upsert.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'upsert', component: UpsertComponent },
+  { path: 'upsert/:id', component: UpsertComponent },
 ];
 
 @NgModule({

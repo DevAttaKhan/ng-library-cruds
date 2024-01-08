@@ -13,12 +13,12 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
   @Input() book: BookModel | undefined;
 
-  @Output() onDelete: EventEmitter<number> = new EventEmitter();
+  @Output() onDelete: EventEmitter<string> = new EventEmitter();
 
-  handleDelete(id: number) {
+  handleDelete(id: string) {
     this.onDelete.emit(id);
   }
   handleEdit(book: BookModel) {
-    this.router.navigate(['/upsert'], { state: book });
+    this.router.navigate([`/upsert/${book.id}`]);
   }
 }

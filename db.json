@@ -1,0 +1,15 @@
+{
+  "books": [
+    {
+      "id": "bf92",
+      "title": "Incidunt cum beatae",
+      "author": "Cupiditate qui fugia",
+      "genre": {
+        "id": 1,
+        "value": "fantasy"
+      },
+      "publisher": "Maxime reiciendis se",
+      "date": "01-Feb-2015"
+    }
+  ]
+}

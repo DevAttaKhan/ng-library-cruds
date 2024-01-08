@@ -29,13 +29,12 @@
       <app-dropdown
         name="genre"
         ngModel
-        #dropdown="ngModel"
+        #genre="ngModel"
         dropdown-validator
       ></app-dropdown>
       <small
         *ngIf="
-          (form.submitted && !dropdown.touched) ||
-          (dropdown.errors && dropdown.touched)
+          (form.submitted && !genre.touched) || (genre.errors && genre.touched)
         "
         >dropdown is a required field.</small
       >
@@ -69,8 +68,8 @@
       >
     </div>
     <div class="actions">
-      <input type="submit" value="Add" />
-      <button>Cancel</button>
+      <input type="submit" value="{{ updateId ? 'Update' : 'Add' }}" />
+      <button type="button" [routerLink]="['/']">Cancel</button>
     </div>
   </form>
 </div>

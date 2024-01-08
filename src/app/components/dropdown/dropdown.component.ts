@@ -53,7 +53,7 @@ export class DropdownComponent implements OnInit, ControlValueAccessor {
   selectItem(item: IOption) {
     this.onTouched();
     this.selectedItem = item;
-    this.onChanged(item.value);
+    this.onChanged(item);
     this.isOpen = false;
   }
 
