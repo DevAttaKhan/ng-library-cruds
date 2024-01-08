@@ -2,7 +2,7 @@
   "books": [
     {
       "id": "bf92",
-      "title": "Incidunt cum beatae",
+      "title": "aaa",
       "author": "Cupiditate qui fugia",
       "genre": {
         "id": 1,
@@ -10,6 +10,28 @@
       },
       "publisher": "Maxime reiciendis se",
       "date": "01-Feb-2015"
+    },
+    {
+      "id": "62f5",
+      "title": "1111",
+      "author": "Unde tempor quia eiu",
+      "genre": {
+        "id": 1,
+        "value": "action"
+      },
+      "publisher": "Aut perspiciatis au",
+      "date": "10-Nov-1982"
+    },
+    {
+      "id": "9be3",
+      "title": "Excepteur aspernatur",
+      "author": "Ratione quisquam dol",
+      "genre": {
+        "id": 1,
+        "value": "action"
+      },
+      "publisher": "Delectus inventore ",
+      "date": "16-Oct-2022"
     }
   ]
 }

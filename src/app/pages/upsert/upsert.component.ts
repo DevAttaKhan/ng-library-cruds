@@ -49,6 +49,6 @@ export class UpsertComponent implements OnInit, DoCheck {
     if (form.invalid) return;
     console.log(form.value);
     this.updateId ? this.update(form.value) : this.create(form.value);
-    this.router.navigate(['/']);
+    this.router.navigate(['/admin']);
   }
 }

@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { DropdownValidatorDirective } from './directives/dropdown-validator.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AdminRoutingModule } from './admin-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +23,16 @@ import { HttpClientModule } from '@angular/common/http';
     CardComponent,
     DropdownComponent,
     DropdownValidatorDirective,
+    AdminLayoutComponent,
+    LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AdminRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

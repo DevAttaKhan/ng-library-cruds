@@ -19,6 +19,6 @@ export class CardComponent implements OnInit {
     this.onDelete.emit(id);
   }
   handleEdit(book: BookModel) {
-    this.router.navigate([`/upsert/${book.id}`]);
+    this.router.navigate([`admin/upsert/${book.id}`]);
   }
 }

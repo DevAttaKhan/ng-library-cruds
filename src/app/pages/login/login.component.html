@@ -1,0 +1,32 @@
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <h4>Enter book Details</h4>
+
+    <div class="form-control">
+      <label>Email</label>
+      <input type="text" name="email" ngModel #email="ngModel" required />
+      <small
+        *ngIf="
+          (form.submitted && !email.touched) || (email.errors && email.touched)
+        "
+        >email is a required field.</small
+      >
+    </div>
+
+    <div class="form-control">
+      <label>Password</label>
+      <input type="text" name="password" ngModel #password="ngModel" required />
+      <small
+        *ngIf="
+          (form.submitted && !password.touched) ||
+          (password.errors && password.touched)
+        "
+        >author is a required field.</small
+      >
+    </div>
+
+    <div class="actions">
+      <input type="submit" value="login" />
+    </div>
+  </form>
+</div>

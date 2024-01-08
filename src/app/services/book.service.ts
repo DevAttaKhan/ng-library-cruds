@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
   constructor(private http: HttpClient) {}
-
+  private booksLoaded: boolean = false;
   private _bookList: BookModel[] = [];
 
   get bookList() {
@@ -18,10 +18,12 @@ export class BookService {
   }
 
   getBooks() {
+    if (this.booksLoaded) return;
     this.http
       .get<BookModel[]>('http://localhost:3000/books')
       .subscribe((data) => {
         this.bookList = data;
+        this.booksLoaded = true;
       });
   }
 
